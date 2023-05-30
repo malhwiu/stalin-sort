@@ -1,3 +1,6 @@
+// Copyright 2023 Nikolai Serafimovich
+// See the LICENSE file at the top-level directory of this distribution
+
 use num::traits::Num;
 
 pub fn stalin_sort<T: Num + std::cmp::PartialOrd>(
