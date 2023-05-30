@@ -30,7 +30,7 @@ mod tests {
     fn it_works() {
         let mut arr = vec![1, 16, 6, 8, 5, 18, 2];
         arr = stalin_sort(arr, false);
-        assert_eq!(arr, vec![1, 6, 8, 18]);
+        assert_eq!(arr, vec![1, 16, 18]);
 
         let mut arr = vec![1, 6, 6, 8, 4, 3, 9];
         arr = stalin_sort(arr, true);
