@@ -27,13 +27,46 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
+    fn t_i32() {
         let mut arr = vec![1, 16, 6, 8, 5, 18, 2];
         arr = stalin_sort(arr, false);
         assert_eq!(arr, vec![1, 16, 18]);
+    }
 
+    #[test]
+    fn t_i32d() {
         let mut arr = vec![1, 6, 6, 8, 4, 3, 9];
         arr = stalin_sort(arr, true);
         assert_eq!(arr, vec![1, 6, 8, 9]);
+    }
+     #[test]
+    fn t_u8() {
+        let expected: Vec<u8> = vec![1, 6, 6, 8, 9];
+        let mut arr:Vec<u8> = vec![1, 6, 6, 8, 4, 3, 9];
+        arr = stalin_sort(arr, false);
+        assert_eq!(arr, expected);
+    }
+
+    #[test]
+    fn t_u8d() {
+        let expected: Vec<u8> = vec![1, 6, 8, 9];
+        let mut arr:Vec<u8> = vec![1, 6, 6, 8, 4, 3, 9];
+        arr = stalin_sort(arr, true);
+        assert_eq!(arr, expected);
+    }
+    #[test]
+    fn t_f32() {
+        let expected: Vec<f32> = vec![-3.2, 8.7, 9.6];
+        let mut arr:Vec<f32> = vec![-3.2, -4.2, 8.7, 9.6, -4.5];
+        arr = stalin_sort(arr, false);
+        assert_eq!(arr, expected);
+    }
+
+    #[test]
+    fn t_f32d() {
+        let expected: Vec<f32> = vec![-3.2, 8.7, 9.6];
+        let mut arr:Vec<f32> = vec![-3.2, -4.2, 8.7, 8.7, 9.6, -4.5];
+        arr = stalin_sort(arr, true);
+        assert_eq!(arr, expected);
     }
 }
