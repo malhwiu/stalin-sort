@@ -1,6 +1,6 @@
-use num::traits::Num;
+use std::ops::Add;
 
-pub fn stalin_sort<T: Num + std::cmp::PartialOrd>(
+pub fn stalin_sort<T: Add<Output = T> + std::cmp::PartialOrd>(
     mut array: Vec<T>,
     remove_repeating: bool,
 ) -> Vec<T> {
