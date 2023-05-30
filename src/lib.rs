@@ -1,5 +1,5 @@
 // Copyright 2023 Nikolai Serafimovich
-// See the LICENSE file at the top-level directory of this distribution
+// This code is licensed under MIT license (see LICENSE at the top-level directory for details)
 
 use num::traits::Num;
 
