@@ -1,10 +1,9 @@
 use num::traits::Num;
 
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
-pub fn stalin_sort<N: std::cmp::PartialOrd>(mut array: Vec<N>, remove_repeating: bool) -> Vec<N> {
+pub fn stalin_sort<T: Num + std::cmp::PartialOrd>(
+    mut array: Vec<T>,
+    remove_repeating: bool,
+) -> Vec<T> {
     let mut length: usize = array.len();
     let mut current_pos: usize = 0;
 
@@ -29,7 +28,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        let mut arr = vec![1, 16, 6, 8, 5, 18, 2];
+        arr = stalin_sort(arr, false);
+        assert_eq!(arr, vec![1, 6, 8, 18]);
     }
 }
